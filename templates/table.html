@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% block head %}
+<link rel="stylesheet" href="/static/css/style.css">
+<title>{{ title }}</title>
+{% endblock %}
+{% block content %}
+<h2 align="center">ОФормление каюты</h2>
+<div style="margin-left: 50px">
+    <table>
+        <tr>
+            <td align="center">Цвет стен</td>
+            <td align="center">Эмблема</td>
+        </tr>
+        <tr>
+            {% if sex == 'male' %}
+                {% if years < 21 %}
+                    <td><img src="/static/img/child_background.jpg"></td>
+                    <td><img src="/static/img/child.jpg"></td>
+                {% else %}
+                    <td><img src="/static/img/man_backgroung.jpg"></td>
+                    <td><img src="/static/img/man.jpg"></td>
+                {% endif %}
+            {% elif sex == 'female' %}
+                {% if years < 21 %}
+                    <td><img src="/static/img/child_background1.jpg"></td>
+                    <td><img src="/static/img/child.jpg"></td>
+                {% else %}
+                    <td><img src="/static/img/man_backgroung1.jpg"></td>
+                    <td><img src="/static/img/man.jpg"></td>
+                {% endif %}
+            {% endif %}
+        </tr>
+    </table>
+</div>
+{% endblock %}

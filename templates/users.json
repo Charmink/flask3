@@ -1,0 +1,22 @@
+{
+    "users": [
+        {
+            "name": "Энди",
+            "surname": "Уир",
+            "img": "/static/img/photo1.jpg",
+            "professions": ["астрогеолог", "специалист по радиационной защите"]
+        },
+        {
+            "name": "James",
+            "surname": "Harden",
+            "img": "/static/img/photo2.jpg",
+            "professions": ["инженер корабля"]
+        },
+        {
+            "name": "Tomas",
+            "surname": "Scotland",
+            "img": "/static/img/photo3.jpg",
+            "professions": ["специалист дозаправки", "инженер"]
+        }
+    ]
+}

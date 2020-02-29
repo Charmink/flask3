@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1 align="center">Works log</h1>
+{% for item in job %}
+        <div style="margin-left: 50px;">
+        <h2>Action # {{ loop.index }}</h2>
+            <table>
+                <tr>
+                    <th width="400" class="alert alert-secondary"
+                        role="alert">Title of activity</th>
+                    <th width="200" class="alert alert-secondary" role="alert">Team leader</th>
+                    <th width="50" class="alert alert-secondary" role="alert">Duration</th>
+                    <th width="50" class="alert alert-secondary"
+                        role="alert">List of collaborators</th>
+                    <th width="50" class="alert alert-secondary" role="alert">Is finished</th>
+                </tr>
+                <tr>
+                    <td width="400" class="alert alert-primary" role="alert">{{ item.job }}</td>
+                    <td width="200" class="alert alert-primary"
+                        role="alert">{{ ' '.join(workers[loop.index - 1]) }}</td>
+                    <td width="40" class="alert alert-primary"
+                        role="alert">{{ item.work_size }}</td>
+                    <td width="40" class="alert alert-primary"
+                        role="alert">{{ item.collaborators }}</td>
+                    {% if item.is_finished %}
+                        <td width="50" class="alert alert-danger" role="alert">Is finished</td>
+                    {% else %}
+                        <td width="50" class="alert alert-danger" role="alert">Is not finished</td>
+                    {% endif %}
+                </tr>
+            </table>
+        </div>
+{% endfor %}
+{% endblock %}

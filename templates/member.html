@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+{% block content %}
+{% set user = users|random %}
+<div align="center">
+    <h2>{{ user['name'] }} {{ user['surname'] }}</h2>
+    <img src="{{ user['img'] }}" alt="Фото работника" width="400" height="400">
+    <div>{{ ', '.join(user['professions']) }}</div>
+</div>
+{% endblock %}
